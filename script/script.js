@@ -1,10 +1,2 @@
-var sound = document.getElementById("hover-sound");
-
-function playHoverSound() {
-  sound.play();
-}
-
-function stopHoverSound() {
-  sound.pause();
-  sound.currentTime = 0;
-}
+var welcome = "JavaScript"
+document.write(welcome," Hello");
