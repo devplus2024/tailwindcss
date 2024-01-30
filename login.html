@@ -8,40 +8,45 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="script/script.js"></script>
   </head>
-  <body class="bg-gradient-to-r from-cyan-600 to-teal-600">
+  <body
+    class="bg-gradient-to-r from-cyan-600 to-teal-600 h-screen flex justify-center items-center m-0"
+  >
     <header></header>
     <main>
-      <div class="container flex justify-center">
-        <div class="mt-36">
+      <div class="container mx-auto my-auto">
+        <div class="">
           <div
-            class="bg-white w-80 h-96 rounded-2xl relative shadow-2xl shadow-green-500 ring-2 ring-blue-500"
+            class="bg-white rounded-2xl shadow-2xl shadow-green-500 ring-2 ring-blue-500"
           >
-            <div class="flex justify-center container mx-auto">
+            <div class="flex justify-center">
               <span class="text-black mt-14 text-2xl">——— Login ———</span>
             </div>
-            <div class="absolute left-1/2 -translate-x-1/2 mt-3">
+            <div class="mt-3 mx-4">
               <input
                 type="text"
                 name=""
-                id=""
+                id="myInput1"
                 placeholder="Enter Your Email"
-                class="rounded-2xl mt-4 border-sky-500 border-4"
+                class="rounded-sm mt-4 border-sky-500 border-2 transition duration-300 ease-in-out w-96 block"
               />
               <input
+                id="myInput2"
                 type="text"
                 placeholder="Enter Your UserName"
-                class="rounded-2xl border-sky-500 border-4 mt-2"
+                class="rounded-sm mt-2 border-sky-500 border-2 transition duration-300 ease-in-out w-96 block"
               />
               <input
+                id="myInput3"
                 type="password"
                 placeholder="Enter Your PassWord"
-                class="rounded-2xl mt-2 border-sky-500 border-4"
+                class="rounded-sm mt-2 border-sky-500 border-2 transition duration-300 ease-in-out w-96 block"
               />
-              <div class="relative mt-2">
+              <div class="mt-2 flex justify-center">
                 <input
+                  onclick="layDuLieu()"
                   type="submit"
                   value="Submit"
-                  class="absolute top-1/2 left-1/2 -translate-x-1/2 text-white border-sky-400 border-4 rounded-2xl p-1 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-purple-600 hover:to-indigo-700"
+                  class="text-white border-sky-400 border-4 rounded-2xl p-1 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-purple-600 hover:to-indigo-700"
                 />
               </div>
               <br />
