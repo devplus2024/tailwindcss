@@ -15,21 +15,53 @@ function layDuLieu() {
   }
 }
 
-// Optional: Thêm sự kiện để tắt controls khi video đã bắt đầu phát
-// document.querySelector('.rounded-lg').addEventListener('play', function() {
-//   this.controls = false;
-// });
 
 document.addEventListener("DOMContentLoaded", function() {
-  const radioButtons = document.querySelectorAll('input[type="radio"]');
+  const desktopRadios = document.querySelectorAll('input[name="content"]');
+  const mobileRadios = document.querySelectorAll('input[name="content-mobile"]');
   const contents = document.querySelectorAll('.content');
 
-  radioButtons.forEach(function(radioButton, index) {
-    radioButton.addEventListener("change", function() {
-      contents.forEach(function(content) {
-        content.classList.remove("active");
+  // Xác định radio button và nội dung mặc định
+  const defaultDesktopRadio = document.querySelector('input[name="content"]:checked');
+  const defaultContentId = `content-${defaultDesktopRadio.id}`;
+  const defaultContent = document.getElementById(defaultContentId);
+  defaultContent.classList.add("active");
+
+  // Thêm sự kiện change cho desktop radio buttons để xử lý khi chúng được chọn
+  desktopRadios.forEach(function(desktopRadio) {
+      desktopRadio.addEventListener("change", function() {
+          // Đồng bộ hóa trạng thái giữa desktop và mobile
+          const correspondingMobileRadioId = this.id.replace('desktop', 'mobile');
+          const correspondingMobileRadio = document.getElementById(correspondingMobileRadioId);
+          correspondingMobileRadio.checked = this.checked;
+
+          // Hiển thị nội dung tương ứng với radio button được chọn
+          showContent(this);
       });
-      contents[index].classList.add("active");
-    });
   });
+
+  // Thêm sự kiện change cho mobile radio buttons để xử lý khi chúng được chọn
+  mobileRadios.forEach(function(mobileRadio) {
+      mobileRadio.addEventListener("change", function() {
+          // Đồng bộ hóa trạng thái giữa mobile và desktop
+          const correspondingDesktopRadioId = this.id.replace('mobile', 'desktop');
+          const correspondingDesktopRadio = document.getElementById(correspondingDesktopRadioId);
+          correspondingDesktopRadio.checked = this.checked;
+
+          // Hiển thị nội dung tương ứng với radio button được chọn
+          showContent(correspondingDesktopRadio);
+      });
+  });
+
+  // Hàm hiển thị nội dung tương ứng với radio button được chọn
+  function showContent(radio) {
+      const selectedContentId = `content-${radio.id}`;
+      contents.forEach(function(content) {
+          content.classList.remove("active");
+      });
+
+      const selectedContent = document.getElementById(selectedContentId);
+      selectedContent.classList.add("active");
+  }
 });
+

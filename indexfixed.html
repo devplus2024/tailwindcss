@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
     />
-    <link rel="stylesheet" href="./css/indexfixed.css">
+    <link rel="stylesheet" href="./css/indexfixed.css" />
   </head>
   <body class="">
     <div class="relative">
@@ -20,11 +20,11 @@
         <nav class="mr-16">
           <!-- Hamburger icon for mobile -->
           <div class="md:hidden">
-            <span
-              class="text-white text-3xl cursor-pointer ml-4 select-none transition duration-300 ease-in-out"
+            <i
+              id="menuIcon"
+              class="ti ti-menu-2 text-white text-3xl cursor-pointer ml-4"
               onclick="toggleMenu()"
-              >☰</span
-            >
+            ></i>
           </div>
           <!-- Main menu -->
           <div class="hidden md:flex md:items-center md:justify-between">
@@ -41,71 +41,159 @@
               />
             </div>
             <div class="absolute -translate-y-1/2 ml-96 top-1/2">
-              <a href="indexfixed.html" class="mr-4 text-white">Home</a>
-              <a href="index.html" class="mt-9 mr-4 text-white">Fantasy</a>
-              <a href="index.html" class="mt-9 mr-4 text-white">Pricing</a>
-              <a href="livelywallpaper.html" class="mt-9 mr-4 text-white"
-                >LiveLy Wallpapers</a
-              >
-              <a href="login.html" class="mt-9 mr-4 text-white">Login</a>
-            </div>
+              <input type="radio" name="content" id="desktopRadio1" checked class="" />
+              <label for="desktopRadio1" class="mr-4 select-none">Home</label>
+              
+              <input type="radio" name="content" id="desktopRadio2" class="" />
+              <label for="desktopRadio2" class="mr-4 select-none">Fantasy</label>
+              
+              <input type="radio" name="content" id="desktopRadio3" class="" />
+              <label for="desktopRadio3" class="mr-4 select-none">Pricing</label>
+              
+              <input type="radio" name="content" id="desktopRadio4" class="" />
+              <label for="desktopRadio4" class="mr-4 select-none">LiveLy Wapapers</label>
+              
+              <input type="radio" name="content" id="desktopRadio5" class="" />
+              <label for="desktopRadio5" class="select-none">Login</label>
+          </div>
           </div>
         </nav>
       </div>
 
       <!-- Mobile menu -->
-      <div
-        id="mobileMenu"
-        class="hidden md:hidden bg-slate-950 relative transition duration-300 ease-in-out"
-      >
-        <a
-          href="indexfixed.html"
-          class="block w-fit ml-4 transition duration-300 ease-in-out -translate-y-full text-white py-2 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
-          >Home</a
-        >
-        <a
-          href="index.html"
-          class="block w-fit ml-4 transition duration-300 ease-in-out -translate-y-full text-white py-2 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
-          >Fantasy</a
-        >
-        <a
-          href="index.html"
-          class="block w-fit ml-4 -translate-y-full text-white py-2 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
-          >Pricing</a
-        >
-        <a
-          href="livelywallpaper.html"
-          class="block w-fit text-white py-2 -translate-y-full ml-4 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
-          >LiveLy Wallpapers</a
-        >
-        <a
-          href="login.html"
-          class="block w-fit text-white py-2 -translate-y-full ml-4 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
-          >Login</a
-        >
-      </div>
+      <div id="mobileMenu" class="hidden md:hidden bg-slate-950 relative flex flex-col">
+        <input type="radio" name="content-mobile" id="mobileRadio1" checked class="" />
+        <label for="mobileRadio1" class="mr-4 select-none ml-8 -translate-y-full">Home</label>
+        
+        <input type="radio" name="content-mobile" id="mobileRadio2" class="" />
+        <label for="mobileRadio2" class="mr-4 select-none ml-8 -translate-y-full">Fantasy</label>
+        
+        <input type="radio" name="content-mobile" id="mobileRadio3" class="" />
+        <label for="mobileRadio3" class="mr-4 select-none ml-8 -translate-y-full">Pricing</label>
+        
+        <input type="radio" name="content-mobile" id="mobileRadio4" class="" />
+        <label for="mobileRadio4" class="mr-4 select-none ml-8 -translate-y-full">LiveLy Wapapers</label>
+        
+        <input type="radio" name="content-mobile" id="mobileRadio5" class="" />
+        <label for="mobileRadio5" class="select-none ml-8 -translate-y-full">Login</label>
     </div>
-    <div class="nav-1">
-      <div class="radio-buttons">
-        <input type="radio" name="content" id="radio1" checked>
-        <label for="radio1">Option 1</label>
     
-        <input type="radio" name="content" id="radio2">
-        <label for="radio2">Option 2</label>
-    
-        <input type="radio" name="content" id="radio3">
-        <label for="radio3">Option 3</label>
-      </div>
+
+    <div class="content" id="content-desktopRadio1">Content for Home</div>
+    <div class="content" id="content-desktopRadio2">Content for Fantasy</div>
+    <div class="content" id="content-desktopRadio3">Content for Pricing</div>
+    <div class="content" id="content-desktopRadio4">
+      <div class="relative">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-items-center ml-4 mr-4 mt-4 sm:grid-cols-1 xl:grid-cols-4 lg:grid-cols-3"
+        >
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/1.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <a href="video/1.mp4" download id="downloadLink">
+                <button
+                  class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+                >
+                  Download
+                </button>
+              </a>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/2.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/3.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>  
     </div>
-  
-    <div class="content" id="content1">Content for Option 1</div>
-    <div class="content" id="content2">Content for Option 2</div>
-    <div class="content" id="content3">Content for Option 3</div>
+    <div class="content" id="content-desktopRadio5">Content for Login</div>
     <script>
       function toggleMenu() {
-        var mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.classList.toggle("hidden");
+      var mobileMenu = document.getElementById("mobileMenu");
+      var menuIcon = document.getElementById("menuIcon");
+
+      mobileMenu.classList.toggle("hidden");
+
+      // Toggle the menu icon between ti-menu-2 and ti-x
+      if (mobileMenu.classList.contains("hidden")) {
+        menuIcon.classList.remove("ti-x");
+        menuIcon.classList.add("ti-menu-2");
+      } else {
+        menuIcon.classList.remove("ti-menu-2");
+        menuIcon.classList.add("ti-x");
       }
+    }
     </script>
   </body>
 </html>
