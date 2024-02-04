@@ -3,155 +3,564 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TailwindCss</title>
+    <title>GFE</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="script/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/indexfixed.css" />
   </head>
-  <body class="bg-white h-screen">
-    <div class="flex justify-center relative my-4 container inline-block">
-      <div class="fixed top-0 mt-4 flex">
-        <a href="index.html">
-          <button
-            type="button"
-            class="shadow-lg shadow-cyan-500/80 ring-2 ring-blue-500 text-white font-semibold bg-gradient-to-r from-green-400 to-blue-500 text-lg transition ease-in-out delay-20 hover:-translate-y-1 hover:scale-110 hover:from-pink-500 duration-300 hover:to-yellow-500 duration-300 rounded mx-4 p-4"
-          >
-            Home
-          </button>
-        </a>
-        <a href="product.html" title="Product" target="_blank">
-          <button
-            type="button"
-            class="shadow-lg shadow-cyan-500/80 ring-2 ring-blue-500 text-white font-semibold bg-gradient-to-r from-green-400 to-blue-500 text-lg transition ease-in-out delay-20 hover:-translate-y-1 hover:scale-110 hover:from-pink-500 duration-300 hover:to-yellow-500 duration-300 rounded mx-4 p-4"
-          >
-            Product
-          </button>
-        </a>
-        <button
-          type="button"
-          class="shadow-lg shadow-cyan-500/80 ring-2 ring-blue-500 text-white font-semibold bg-gradient-to-r from-green-400 to-blue-500 text-lg transition ease-in-out delay-20 hover:-translate-y-1 hover:scale-110 hover:from-pink-500 duration-300 hover:to-yellow-500 duration-300 rounded mx-4 p-4"
-        >
-          Feature
-        </button>
-        <button
-          type="button"
-          class="shadow-lg shadow-cyan-500/80 ring-2 ring-blue-500 text-white font-semibold bg-gradient-to-r from-green-400 to-blue-500 text-lg transition ease-in-out delay-20 hover:-translate-y-1 hover:scale-110 hover:from-pink-500 duration-300 hover:to-yellow-500 duration-300 rounded mx-4 p-4"
-        >
-          Pricing
-        </button>
-        <button
-          type="button"
-          class="shadow-lg shadow-cyan-500/80 ring-2 ring-blue-500 text-white font-semibold bg-gradient-to-r from-green-400 to-blue-500 text-lg transition ease-in-out delay-20 hover:-translate-y-1 hover:scale-110 hover:from-pink-500 duration-300 hover:to-yellow-500 duration-300 rounded mx-4 p-4"
-        >
-          Contact
-        </button>
-        <a href="login.html" target="_blank">
-          <button
-            type="button"
-            class="shadow-lg shadow-cyan-500/80 ring-2 ring-blue-500 text-white font-semibold bg-gradient-to-r from-green-400 to-blue-500 text-lg transition ease-in-out delay-20 hover:-translate-y-1 hover:scale-110 hover:from-pink-500 duration-300 hover:to-yellow-500 duration-300 rounded mx-4 p-4"
-          >
-            About
-          </button>
-        </a>
+  <body class="">
+    <div class="relative">
+      <div class="h-24 bg-slate-950 relative">
+        <!-- Navigation -->
+        <nav class="mr-16">
+          <!-- Hamburger icon for mobile -->
+          <div class="md:hidden">
+            <i
+              id="menuIcon"
+              class="ti ti-menu-2 text-white text-3xl cursor-pointer ml-4"
+              onclick="toggleMenu()"
+            ></i>
+          </div>
+          <!-- Main menu -->
+          <div class="hidden md:flex md:items-center md:justify-between">
+            <!-- Logo and Search Bar -->
+            <div class="absolute top-1/2 -translate-y-1/2 top-1/2 ml-4">
+              <i
+                class="ti ti-search absolute top-1/2 -translate-y-1/2 top-1/2 left-1 pointer-events-none"
+              ></i>
+              <input
+                type="search"
+                name=""
+                id=""
+                class="w-56 rounded-lg border-sky-500 border-2 h-9 transition duration-300 ease-in-out pl-6"
+              />
+            </div>
+            <div class="absolute -translate-y-1/2 ml-96 top-1/2">
+              <input type="radio" name="content" id="desktopRadio1" checked class="" />
+              <label for="desktopRadio1" class="mr-4 select-none">Home</label>
+              
+              <input type="radio" name="content" id="desktopRadio2" class="" />
+              <label for="desktopRadio2" class="mr-4 select-none">Fantasy</label>
+              
+              <input type="radio" name="content" id="desktopRadio3" class="" />
+              <label for="desktopRadio3" class="mr-4 select-none">Pricing</label>
+              
+              <input type="radio" name="content" id="desktopRadio4" class="" />
+              <label for="desktopRadio4" class="mr-4 select-none">LiveLy Wallpapers</label>
+              
+              <input type="radio" name="content" id="desktopRadio5" class="" />
+              <label for="desktopRadio5" class="select-none">Login</label>
+          </div>
+          </div>
+        </nav>
       </div>
-    </div>
-    <br />
-    <br />
-    <div class="text-2xl font-extrabold flex justify-center relative">
-      <div class="fixed">
-        <span
-          class="z-40 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500"
-        >
-          By Pham Quang Truong An
-        </span>
-      </div>
-    </div>
-    <br />
-    <br />
-    <br />
-    <div class="grid grid-cols-5 gap-4 justify-items-center mx-4 z-30">
-      <div class="z-30">
-        <img
-          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-          class="rounded-md transition ease-in-out delay-20 shadow-lg shadow-cyan-500/80 hover:-translate-y-1 hover:scale-110"
-        />
-        <span class="ml-9">Thịt nướng</span>
-      </div>
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-          class="rounded-md transition ease-in-out delay-20 shadow-lg shadow-cyan-500/80 hover:-translate-y-1 hover:scale-110"
-        />
-        <span class="ml-9">Thịt nướng</span>
-      </div>
-      <div class="z-30">
-        <img
-          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-          class="z-30 rounded-md transition ease-in-out delay-20 shadow-lg shadow-cyan-500/80 hover:-translate-y-1 hover:scale-110"
-        />
-        <span class="ml-9">Thịt nướng</span>
-      </div>
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-          class="rounded-md transition ease-in-out delay-20 shadow-lg shadow-cyan-500/80 hover:-translate-y-1 hover:scale-110"
-        />
-        <span class="ml-9">Thịt nướng</span>
-      </div>
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
-          class="rounded-md transition ease-in-out delay-20 shadow-lg shadow-cyan-500/80 hover:-translate-y-1 hover:scale-110"
-        />
-        <span class="ml-9">Thịt nướng</span>
-      </div>
-    </div>
 
-    <div class="border-4 text-2xl border-sky-500 rounded mx-3 my-3 p-4">
-      <p
-        class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500"
-      >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-        reprehenderit repellendus mollitia id in, similique aspernatur tempora
-        beatae cupiditate illo odit necessitatibus voluptas itaque doloribus.
-        Libero eos eaque in labore? Beatae quo perspiciatis obcaecati veniam
-        ipsa, quas vitae est in voluptatem ea nulla? Repellat quod accusamus
-        placeat ex autem. Nemo maxime eligendi non labore rerum quibusdam
-        praesentium ullam earum error? Voluptates, numquam placeat voluptas
-        dolor ea reprehenderit consectetur eos assumenda nisi obcaecati, ipsam
-        tempore facilis a quisquam id error libero facere nobis adipisci labore
-        accusantium quod fugiat? Voluptatem, in fuga! Rerum doloribus voluptatem
-        error voluptatibus, quisquam maiores iusto enim dignissimos saepe sit.
-        Est iusto sequi earum obcaecati amet animi, ex reprehenderit nisi
-        deleniti quibusdam cum temporibus tempore esse officia accusamus? Cum
-        molestias et, voluptates minima molestiae reprehenderit laudantium
-        soluta eveniet reiciendis incidunt illo fuga magni delectus voluptate
-        quaerat quidem, atque accusantium repellat debitis itaque deserunt?
-        Assumenda, alias! Asperiores, blanditiis optio?
-      </p>
-    </div>
-
-    <div
-      class="relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 pinline-block rounded-lg mx-auto my-auto h-60 w-60"
-    >
-      <div
-        class="bg-white h-56 w-56 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded"
-      >
-        <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-          <span
-            class="  m-0 p-0"
-            >Hebbbvbvbnjj</span
-          >
-        </div>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden md:hidden bg-slate-950 relative flex flex-col">
+        <input type="radio" name="content-mobile" id="mobileRadio1" checked class="" />
+        <label for="mobileRadio1" class="mr-4 select-none ml-8 -translate-y-full">Home</label>
         
-      </div>
+        <input type="radio" name="content-mobile" id="mobileRadio2" class="" />
+        <label for="mobileRadio2" class="mr-4 select-none ml-8 -translate-y-full">Fantasy</label>
+        
+        <input type="radio" name="content-mobile" id="mobileRadio3" class="" />
+        <label for="mobileRadio3" class="mr-4 select-none ml-8 -translate-y-full">Pricing</label>
+        
+        <input type="radio" name="content-mobile" id="mobileRadio4" class="" />
+        <label for="mobileRadio4" class="mr-4 select-none ml-8 -translate-y-full">LiveLy Wallpapers</label>
+        
+        <input type="radio" name="content-mobile" id="mobileRadio5" class="" />
+        <label for="mobileRadio5" class="select-none ml-8 -translate-y-full">Login</label>
     </div>
-    <div class="h-screen"></div>
+    
 
-    <script src="./script/script.js"></script>
+    <div class="content" id="content-desktopRadio1">Content for Home</div>
+    <div class="content" id="content-desktopRadio2">Content for Fantasy</div>
+    <div class="content" id="content-desktopRadio3">Content for Pricing</div>
+    <div class="content" id="content-desktopRadio4">
+      <div class="relative">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-items-center ml-4 mr-4 mt-4 sm:grid-cols-1 xl:grid-cols-4 lg:grid-cols-3"
+        >
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/1.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <a href="video/1.mp4" download id="downloadLink">
+                <button
+                  class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+                >
+                  Download
+                </button>
+              </a>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/2.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/3.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-4">
+          <input type="radio" name="content-mini" id="radio-mini-1"  checked>
+          <label for="radio-mini-1" class="bg-violet-500 mr-4 p-4 rounded-lg">Option 1</label>
+
+          <input type="radio" name="content-mini" id="radio-mini-1">
+          <label for="radio-mini-2" class="bg-violet-500 mr-4 p-4 rounded-lg">Option 2</label>
+
+          <input type="radio" name="content-mini" id="radio-mini-1">
+          <label for="radio-mini-3" class="bg-violet-500 mr-4 p-4 rounded-lg">Option 3</label>
+          
+          <div class="content-mini" id="content-1-mini">Content for Option 1</div>
+          <div class="content-mini" id="content-2-mini">Content for Option 2</div>
+          <div class="content-mini" id="content-3-mini">Content for Option 3</div>
+
+        </div>
+      </div>  
+    </div>
+    <div class="content" id="content-desktopRadio5">Content for Login</div>
+    <script>
+      function toggleMenu() {
+      var mobileMenu = document.getElementById("mobileMenu");
+      var menuIcon = document.getElementById("menuIcon");
+
+      mobileMenu.classList.toggle("hidden");
+
+      // Toggle the menu icon between ti-menu-2 and ti-x
+      if (mobileMenu.classList.contains("hidden")) {
+        menuIcon.classList.remove("ti-x");
+        menuIcon.classList.add("ti-menu-2");
+      } else {
+        menuIcon.classList.remove("ti-menu-2");
+        menuIcon.classList.add("ti-x");
+      }
+    }
+    </script>
   </body>
 </html>
