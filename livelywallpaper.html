@@ -1,46 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LiveLyWapapers</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
     <script src="script/script.js"></script>
-</head>
-<body>
-    <div class="">
-        <div class="h-24 bg-slate-950">
-          <div class="mr-16 flex">
-            <div class="relative flex">
+  </head>
+
+  <body class="bg-white">
+    <div class="relative">
+      <div class="h-24 bg-slate-950 relative">
+        <!-- Navigation -->
+        <nav class="mr-16">
+          <!-- Hamburger icon for mobile -->
+          <div class="md:hidden">
+            <span
+              class="text-white text-3xl cursor-pointer ml-4 select-none transition duration-300 ease-in-out"
+              onclick="toggleMenu()"
+              >☰</span
+            >
+          </div>
+          <!-- Main menu -->
+          <div class="hidden md:flex md:items-center md:justify-between">
+            <!-- Logo and Search Bar -->
+            <div class="absolute top-1/2 -translate-y-1/2 top-1/2 ml-4">
               <i
-                class="ti ti-search absolute translate-y-1/2 translate-x-1/2 left-0 ml-4 top-1/2 pointer-events-none"
+                class="ti ti-search absolute top-1/2 -translate-y-1/2 top-1/2 left-1 pointer-events-none"
               ></i>
               <input
                 type="search"
                 name=""
                 id=""
-                class="ml-4 mt-8 rounded-2xl w-96 pl-8"
-                style="width: 800px"
+                class="w-56 rounded-lg border-sky-500 border-2 h-9 transition duration-300 ease-in-out pl-6"
               />
             </div>
-            <div class="mt-9 ml-16">
-              <a href="index.html" class="mt-9 mr-4 text-white">Home</a>
-              <a href="index.html" class="mt-9 mr-4 text-white">Fantacy</a>
+            <div class="absolute -translate-y-1/2 ml-96 top-1/2">
+              <a href="indexfixed.html" class="mr-4 text-white">Home</a>
+              <a href="index.html" class="mt-9 mr-4 text-white">Fantasy</a>
               <a href="index.html" class="mt-9 mr-4 text-white">Pricing</a>
-              <a href="livelywallpaper.html" class="mt-9 mr-4 text-white" target="_blank"
+              <a href="livelywallpaper.html" class="mt-9 mr-4 text-white"
                 >LiveLy Wallpapers</a
               >
               <a href="login.html" class="mt-9 mr-4 text-white">Login</a>
             </div>
           </div>
-        </div>
-        <div
-          class="bg-teal-600 inline-block pl-4 pr-4 pt-2 pb-2 rounded-b-lg ml-2"
-        >
-          <span>New</span>
-        </div>
-        <br />
+        </nav>
       </div>
-</body>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-slate-950 relative transition duration-300 ease-in-out"
+      >
+        <a
+          href="indexfixed.html"
+          class="block w-fit ml-4 transition duration-300 ease-in-out -translate-y-full text-white py-2 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
+          >Home</a
+        >
+        <a
+          href="index.html"
+          class="block w-fit ml-4 -translate-y-full text-white py-2 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
+          >Fantasy</a
+        >
+        <a
+          href="index.html"
+          class="block w-fit ml-4 -translate-y-full text-white py-2 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
+          >Pricing</a
+        >
+        <a
+          href="livelywallpaper.html"
+          class="block w-fit text-white py-2 -translate-y-full ml-4 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
+          >LiveLy Wallpapers</a
+        >
+        <a
+          href="login.html"
+          class="block w-fit text-white py-2 -translate-y-full ml-4 hover:bg-teal-500 hover:px-4 hover:rounded-lg hover:transition hover:duration-150 hover:ease-in-out hover:inline-block"
+          >Login</a
+        >
+      </div>
+
+      <br />
+      <div class="relative">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 justify-items-center ml-4 mr-4 mt-4 sm:grid-cols-1 xl:grid-cols-4 lg:grid-cols-3"
+        >
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/1.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <a href="video/1.mp4" download>
+                <button
+                  class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+                >
+                  Download
+                </button>
+              </a>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/2.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/3.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 sm:w-56 mx-auto sm:w-full"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+          <div class="bg-teal-500 p-4 rounded-lg">
+            <video
+              src="./video/4.mp4"
+              controls
+              autoplay
+              loop
+              class="rounded-lg sm:w-56 mx-auto sm:w-full"
+              id="video-4"
+            ></video>
+            <div class="flex justify-center mt-2">
+              <button
+                class="bg-teal-500 p-4 rounded-lg mr-4 border-gray-100 border-4"
+              >
+                Download
+              </button>
+              <button
+                class="bg-teal-500 p-4 rounded-lg border-gray-100 border-4"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
 </html>

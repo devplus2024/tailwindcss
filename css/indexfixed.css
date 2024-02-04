@@ -1,0 +1,42 @@
+.nav-1 {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .radio-buttons {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    background-color: #ddd;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  label:hover {
+    background-color: #ccc;
+  }
+  
+  button {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .content.active {
+    display: block;
+  }
+  
